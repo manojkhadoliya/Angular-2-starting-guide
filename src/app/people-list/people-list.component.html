@@ -1,0 +1,13 @@
+<section>
+<h2>List of Star Wars People!</h2>
+<ul>
+  <li *ngFor="let person of people">
+    <a [routerLink]="['/persons',person.id]">
+        {{person.name}}
+    </a>
+  </li>
+</ul>
+<section *ngIf = "errorMessage">
+  {{errorMessage}}
+</section>
+</section>
